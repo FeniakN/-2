@@ -1,0 +1,47 @@
+# task1
+print("Twinkle, twinkle, little star,")
+print("  How I wonder what you are!")
+print("     Up above the world so high,")
+print("     Like a diamond in the sky.")
+print("Twinkle, twinkle, little star,")
+print("  How I wonder what you are!")
+
+# task2
+import math
+radius = float(input("5 "))
+
+# Обчисліть площу кола за формулою: π * r^2
+area = math.pi * radius**2
+print(f"5{radius} 0.5: {area:.2f}")
+
+
+
+# task3
+def color():
+    color_list = ["Red", "Green", "White", "Black"]
+    return color_list[0] + color_list[3]
+
+# Виведення результату функції
+print(color( ))
+
+
+
+# task4
+n = 5
+result = n + int(str(n) * 2) + int(str(n) * 3)
+
+# Виведення результату
+print("6:", result)
+
+
+# task5
+def print_even_num():
+    numbers = [386, 462, 47, 418, 907, 344, 236, 375, 823, 566, 597, 978, 328, 615, 953, 345, 399, 162, 758, 219, 918, 237,
+               412, 566, 826, 248, 866, 950, 626, 949, 687, 217, 815, 67, 104, 58, 512, 24, 892, 894, 767,
+               553, 81, 379, 843, 831, 445, 742, 717, 958,743, 527]
+    for i in numbers:
+        if i % 2 == 0:
+            print(i)
+        if i==237:
+                break
+print(print_even_num())
