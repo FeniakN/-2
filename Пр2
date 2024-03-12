@@ -6,15 +6,6 @@ print("     Like a diamond in the sky.")
 print("Twinkle, twinkle, little star,")
 print("  How I wonder what you are!")
 
-# task2
-import math
-radius = float(input("5 "))
-
-# Обчисліть площу кола за формулою: π * r^2
-area = math.pi * radius**2
-print(f"5{radius} 0.5: {area:.2f}")
-
-
 
 # task3
 def color():
@@ -45,3 +36,78 @@ def print_even_num():
         if i==237:
                 break
 print(print_even_num())
+
+
+# task6
+def check_sequence(s):
+    i = 0
+    while i < len(s):
+        # Перевірка наявності послідовності '01' або '10'
+        if s[i:i+2] not in ('01', '10'):
+            return False
+
+        # Знаходження довжини послідовності
+        count = 1
+        while i + 2 + count * 2 < len(s) and s[i:i+2] == s[i+2:i+4]:
+            count += 1
+            i += 2
+
+        # Перевірка, чи відповідає довжина послідовності
+        if i + count * 2 == len(s):
+            return True
+
+        # Переміщення індексу до наступної пари
+        i += 2
+
+    return False
+
+# Приклади використання
+sequence1 = "01010101"
+result1 = check_sequence(sequence1)
+print(result1)  # True
+
+sequence2 = "00011100011"
+result2 = check_sequence(sequence2)
+print(result2)  # False
+
+# task7
+def print_even_with_diapason7(n,m):
+    if m != 0:
+        step = abs(m) * 2
+        if m < 0:
+            step *= -1
+        for i in range(-n, n + 1, step):
+            if i % 2 == 0:
+                print(i)
+print(print_even_with_diapason7(20,2))
+
+# task9
+# а.) Розширення списку
+my_list = [1, 2, 4]
+my_list.extend([3, 6, 7])
+print("а.) Розширений список:", my_list)
+
+# б.) Вставка значення 33333 на другий елемент
+my_list[1] = 33333
+print("б.) Список зі вставленим значенням 33333:", my_list)
+
+# в.) Розташування списку у зворотньому порядку
+my_list.reverse()
+print("в.) Список у зворотньому порядку:", my_list)
+
+# г.) Додавання 3 до кінця списку
+my_list.append(3)
+print("г.) Список з доданим значенням 3:", my_list)
+
+# д.) Видалення першого елемента зі значенням 3
+if 3 in my_list:
+    my_list.remove(3)
+print("д.) Список після видалення першого елемента зі значенням 3:", my_list)
+
+# е.) Розташування списку у порядку збільшення
+my_list.sort()
+print("е.) Список у порядку збільшення:", my_list)
+
+# ж.) Очищення списку
+my_list.clear()
+print("ж.) Порожній список:", my_list)
